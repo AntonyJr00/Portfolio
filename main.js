@@ -9,9 +9,11 @@ navArrow.addEventListener("click", function () {
 });
 
 const links = document.querySelectorAll(".nav__list ul a");
+const clickDown = document.querySelector(".click_abajo");
 
 for (const link of links) {
   link.addEventListener("click", clickHandler);
+  clickDown.addEventListener("click", clickHandler);
 }
 
 function clickHandler(e) {
