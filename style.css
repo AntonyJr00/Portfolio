@@ -346,6 +346,7 @@ body {
 
 .service {
   width: 100%;
+
   min-height: 100vh;
   background-color: #0c0c0c;
   display: flex;
@@ -892,13 +893,4 @@ footer {
   .portfolio {
     padding: 10px 60px 70px;
   }
-}
-
-section {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-section.active {
-  opacity: 1;
 }

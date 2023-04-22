@@ -48,23 +48,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
-//opacity
-
-const sectionsLazy = document.querySelectorAll("section");
-
-const options = {
-  threshold: 0.5,
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    }
-  });
-}, options);
-
-sectionsLazy.forEach((section) => {
-  observer.observe(section);
-});
