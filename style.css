@@ -204,7 +204,7 @@ body {
 
 .click_abajo {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   cursor: pointer;
 }
 
@@ -239,11 +239,17 @@ body {
   height: 100vh;
   background-color: var(--color-black);
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   gap: 30px;
   border: none;
   padding: 0 10px;
+}
+
+.about__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about__text {
@@ -376,6 +382,7 @@ body {
 .service__card {
   border-left: 2px solid red;
   background-color: var(--color-black);
+  cursor: pointer;
 }
 
 .service__title {
@@ -496,6 +503,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 20px;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .port__card {
@@ -588,23 +596,24 @@ body {
 }
 
 .skill__container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
   gap: 2rem;
   padding: 20px;
-  /* border: 2px solid red; */
 }
 
 .skill__card {
   display: grid;
   place-items: center;
   padding: 20px;
-  background-color: var(--color-black);
-  border: 3px solid var(--color-red);
+  background-color: #0c0c0c;
+  border: 2px solid var(--color-red);
   border-radius: 7px;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .skill__card:hover {
@@ -865,6 +874,11 @@ footer {
 
   .port__cards_container {
     width: 70%;
+  }
+
+  .skill__container {
+    max-width: 70%;
+    margin: auto;
   }
 }
 
