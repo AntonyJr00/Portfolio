@@ -26,3 +26,45 @@ function clickHandler(e) {
     behavior: "smooth",
   });
 }
+
+//lazy-loading-------
+
+const sections = [
+  document.querySelector("#about"),
+  document.querySelector("#service"),
+  document.querySelector("#portfolio"),
+  document.querySelector("#contact"),
+];
+
+// Agregamos un evento al objeto window para detectar cuándo se hace scroll
+window.addEventListener("scroll", () => {
+  // Recorremos las secciones y verificamos si son visibles
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= window.innerHeight * 0.8) {
+      // Si la sección es visible, la mostramos
+      if (!section.classList.contains("visible")) {
+        section.classList.add("visible");
+      }
+    }
+  });
+});
+
+//opacity
+
+const sectionsLazy = document.querySelectorAll("section");
+
+const options = {
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, options);
+
+sectionsLazy.forEach((section) => {
+  observer.observe(section);
+});

@@ -12,6 +12,7 @@
 
 body {
   width: 100%;
+  background-color: var(--color-black);
 }
 
 .nav {
@@ -604,6 +605,7 @@ body {
 }
 
 .skill__card {
+  height: 200px;
   display: grid;
   place-items: center;
   padding: 20px;
@@ -890,4 +892,13 @@ footer {
   .portfolio {
     padding: 10px 60px 70px;
   }
+}
+
+section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+section.active {
+  opacity: 1;
 }
