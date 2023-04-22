@@ -85,7 +85,7 @@ body {
 }
 
 .nav_arrow.active i {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 .list__items {
